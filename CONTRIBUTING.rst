@@ -22,6 +22,11 @@ You can now clone your fork of scVelo and install the development mode
     git clone https://github.com/YOUR-USER-NAME/scvelo.git
     cd scvelo
     git checkout --track origin/develop
+
+In general, the installation can be completed with
+
+.. code:: bash
+
     pip install -e '.[dev]'
 
 The last line can, alternatively, be replaced by
@@ -29,6 +34,13 @@ The last line can, alternatively, be replaced by
 .. code:: bash
 
     pip install -r requirements-dev.txt
+
+However, if running Windows, one should first install `hsnwlib` via `conda` and then run the command without quotes
+
+.. code:: bash
+
+    conda install -c conda-forge hnswlib
+    pip install -e .[dev]
 
 
 Finally, to make sure your code follows our code style guideline, install pre-commit:
